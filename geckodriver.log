@@ -1,0 +1,18 @@
+1630206792657	geckodriver	INFO	Listening on 127.0.0.1:36701
+1630206793647	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqJmxBc"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: No GPUs detected via PCI
+1630206802817	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1630206814235	Marionette	INFO	Listening on port 45025
+1630206814640	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 224: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
+1630206841072	geckodriver	INFO	Listening on 127.0.0.1:53831
+1630206841099	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQlNbPv"
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: No GPUs detected via PCI
+1630206842759	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1630206852385	Marionette	INFO	Listening on port 34613
+1630206852508	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js, line 224: uncaught exception: TagError: adsbygoogle.push() error: No slot size for availableWidth=0
