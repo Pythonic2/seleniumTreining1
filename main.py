@@ -1,5 +1,5 @@
 from selenium import webdriver
-
+from selenium.webdriver.common.keys import Keys
 
 # ng-model FirstName
 
@@ -34,25 +34,43 @@ class ChromeAuto:
                 inputs.click()
 
 
-
+    def check(self):
         self.chrome.find_element_by_id('checkbox1').click()
         self.chrome.find_element_by_id('checkbox2').click()
         self.chrome.find_element_by_id('checkbox3').click()
-
+    def language(self):
         # language
         self.chrome.find_element_by_class_name('ui-autocomplete-multiselect').click()
         self.chrome.find_element_by_link_text('Portuguese').click()
         # clica de nv no sexo pra fechar a aba do option
         self.chrome.find_element_by_xpath('//*[@id="basicBootstrapForm"]/div[5]/div/label[1]/input').click()
 
-    # esse da pra fazer como vc disse eu acho
-    # skills
-    # for skills in self.chrome.find_elements_by_tag_name('select'):
-    #     if skills.get_attribute('ng-ng-model')=='Skill':
-    #         skills.click()
+        # skills
 
+    def skills(self):
+        for skills in self.chrome.find_elements_by_tag_name('option'):
+            if skills.get_attribute('value')=='Python':
+                skills.click()
+
+        # COUNTRY
+    def country(self):
+        for country in self.chrome.find_elements_by_tag_name('option'):
+            if country.get_attribute('value') == 'Brazil':
+                country.click()
+
+        #select country writing
+        #country
+        procurarPaises = self.chrome.find_element_by_xpath('//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span/span[2]')
+        procurarPaises.click()
+        campoPesquisa = self.chrome.find_element_by_class_name('select2-search__field')
+        campoPesquisa.click()
+        campoPesquisa.send_keys('Sout',Keys.ENTER)
 
 if __name__ == '__main__':
     chrome = ChromeAuto()
     chrome.acessa('http://demo.automationtesting.in/Register.html')
     chrome.inserirDados()
+    chrome.check()
+    chrome.language()
+    chrome.skills()
+    chrome.country()
