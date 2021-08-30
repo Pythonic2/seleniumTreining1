@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e8c9241-4f16-4c9f-ba99-82b4beb01812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Perfil/Default/Preferences" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Perfil/First Run" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Perfil/Local State" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
+    <list default="true" id="4e8c9241-4f16-4c9f-ba99-82b4beb01812" name="Changes" comment="fdsafdsaf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geckodriver.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +68,21 @@
       <option name="presentableId" value="Default" />
       <updated>1630253650472</updated>
     </task>
+    <task id="LOCAL-00001" summary="fdsafdsaf">
+      <created>1630269286024</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630269286024</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fdsafdsaf">
+      <created>1630269301566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630269301566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,5 +99,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fdsafdsaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="fdsafdsaf" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
