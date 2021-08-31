@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-
+from time import sleep
 # ng-model FirstName
 
 class ChromeAuto:
@@ -16,7 +16,7 @@ class ChromeAuto:
 
     def acessa(self, site):
         self.chrome.get(site)
-
+        self.chrome.maximize_window()
     #
     def inserirDados(self):
         for inputs in self.chrome.find_elements_by_tag_name('input'):
@@ -29,16 +29,16 @@ class ChromeAuto:
                 inputs.send_keys('igormarinhosilva@gmail.com')
             # Phone
             elif inputs.get_attribute('ng-model') == 'Phone':
-                inputs.send_keys('83986030106')
+                inputs.send_keys('8386030106')
             elif inputs.get_attribute('value') == 'Male':
                 inputs.click()
 
 
-    def check(self):
+
         self.chrome.find_element_by_id('checkbox1').click()
         self.chrome.find_element_by_id('checkbox2').click()
         self.chrome.find_element_by_id('checkbox3').click()
-    def language(self):
+
         # language
         self.chrome.find_element_by_class_name('ui-autocomplete-multiselect').click()
         self.chrome.find_element_by_link_text('Portuguese').click()
@@ -47,30 +47,63 @@ class ChromeAuto:
 
         # skills
 
-    def skills(self):
+
         for skills in self.chrome.find_elements_by_tag_name('option'):
             if skills.get_attribute('value')=='Python':
                 skills.click()
 
         # COUNTRY
-    def country(self):
+
+        # procura = self.chrome.find_element_by_id('countries')
+        # procura.click()
+        # procura.send_keys('bra',Keys.ENTER)
+
         for country in self.chrome.find_elements_by_tag_name('option'):
             if country.get_attribute('value') == 'Brazil':
                 country.click()
 
-        #select country writing
-        #country
         procurarPaises = self.chrome.find_element_by_xpath('//*[@id="basicBootstrapForm"]/div[10]/div/span/span[1]/span/span[2]')
         procurarPaises.click()
         campoPesquisa = self.chrome.find_element_by_class_name('select2-search__field')
         campoPesquisa.click()
         campoPesquisa.send_keys('Sout',Keys.ENTER)
 
+        #ano nascimento
+        ano = self.chrome.find_element_by_id('yearbox')
+        ano.click()
+        ano.send_keys('1996',Keys.ENTER)
+
+
+        # mes
+        mes = self.chrome.find_element_by_xpath('//*[@id="basicBootstrapForm"]/div[11]/div[2]/select')
+        mes.click()
+        mes.send_keys('jul',Keys.ENTER)
+
+        # dia
+
+        dia = self.chrome.find_element_by_id('daybox')
+        dia.click()
+        dia.send_keys('29',Keys.ENTER)
+
+        # # senha
+        password = self.chrome.find_element_by_id('firstpassword')
+        password.click()
+        password.send_keys('37192541aaSS@')
+        #
+        # # confirmasenha
+        password = self.chrome.find_element_by_id('secondpassword')
+        password.click()
+        password.send_keys('37192541aaSS@')
+
+        # upload foto
+        for input in self.chrome.find_elements_by_id('imagesrc'):
+            if input.get_attribute('type')=='file':
+                input.send_keys('C:/Users/igor/Documents/GitHub/seleniumTreining1/python.jfif')
+        self.chrome.find_element_by_id('submitbtn').click()
+        sleep(3)
+        self.chrome.find_element_by_id('Button1').click()
+
 if __name__ == '__main__':
     chrome = ChromeAuto()
     chrome.acessa('http://demo.automationtesting.in/Register.html')
     chrome.inserirDados()
-    chrome.check()
-    chrome.language()
-    chrome.skills()
-    chrome.country()
