@@ -34,7 +34,7 @@ class ChromeAuto:
                 inputs.click()
 
 
-
+    def check(self):
         self.chrome.find_element_by_id('checkbox1').click()
         self.chrome.find_element_by_id('checkbox2').click()
         self.chrome.find_element_by_id('checkbox3').click()
@@ -47,16 +47,14 @@ class ChromeAuto:
 
         # skills
 
-
+    def skills(self):
         for skills in self.chrome.find_elements_by_tag_name('option'):
             if skills.get_attribute('value')=='Python':
                 skills.click()
 
         # COUNTRY
 
-        # procura = self.chrome.find_element_by_id('countries')
-        # procura.click()
-        # procura.send_keys('bra',Keys.ENTER)
+    def paises(self):
 
         for country in self.chrome.find_elements_by_tag_name('option'):
             if country.get_attribute('value') == 'Brazil':
@@ -68,6 +66,7 @@ class ChromeAuto:
         campoPesquisa.click()
         campoPesquisa.send_keys('Sout',Keys.ENTER)
 
+    def idade(self):
         #ano nascimento
         ano = self.chrome.find_element_by_id('yearbox')
         ano.click()
@@ -85,6 +84,7 @@ class ChromeAuto:
         dia.click()
         dia.send_keys('29',Keys.ENTER)
 
+    def login(self):
         # # senha
         password = self.chrome.find_element_by_id('firstpassword')
         password.click()
@@ -95,15 +95,30 @@ class ChromeAuto:
         password.click()
         password.send_keys('37192541aaSS@')
 
+    def uparfoto(self):
+
         # upload foto
         for input in self.chrome.find_elements_by_id('imagesrc'):
             if input.get_attribute('type')=='file':
                 input.send_keys('C:/Users/igor/Documents/GitHub/seleniumTreining1/python.jfif')
         self.chrome.find_element_by_id('submitbtn').click()
-        sleep(3)
-        self.chrome.find_element_by_id('Button1').click()
+        sleep(2)
+        self.chrome.find_element_by_link_text('WebTable').click()
+    def quite(self):
+        self.chrome.quit()
+
+    def executatdo(self):
+        chrome.inserirDados()
+        chrome.check()
+        chrome.skills()
+        chrome.paises()
+        chrome.idade()
+        chrome.login()
+        chrome.uparfoto()
+
 
 if __name__ == '__main__':
     chrome = ChromeAuto()
     chrome.acessa('http://demo.automationtesting.in/Register.html')
-    chrome.inserirDados()
+    chrome.executatdo()
+
